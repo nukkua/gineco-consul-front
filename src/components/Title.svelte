@@ -14,13 +14,19 @@
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 10px;
+
 	}
 	h1 {
+		font-size: 26px;
 		font-weight: bold;
 	}
 	img {
 		width: 30vw;
 	}
 	@media(min-width: 769px){
+		img{
+			width: 20vw;
+			height: auto;
+		}
 	}
 </style>

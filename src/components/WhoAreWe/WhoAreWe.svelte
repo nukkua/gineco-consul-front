@@ -6,10 +6,12 @@
 
 <div class="main-container">
 	<Title titleName={'Quienes somos?'} />
-	<img src="/images/WhoAreWeImage.png" alt="" />
-	<div class="information">
-		<DescriptionWhoAreWe />
-		<ButtonWhoAreWe />
+	<div class="information-image">
+		<img src="/images/WhoAreWeImage.png" alt="" />
+		<div class="information">
+			<DescriptionWhoAreWe />
+			<ButtonWhoAreWe />
+		</div>
 	</div>
 </div>
 
@@ -20,10 +22,29 @@
 		align-content: center;
 		justify-content: center;
 	}
-	.main-container img {
-		width: 40vw;
-		height: 40hw;
-		align-content: center;
-		justify-content: center;
+	.main-container .information-image img{
+		width: 50vw;
+		height: 50hw;
+		margin-left: 25vw;
+	}
+	@media (min-width: 769px) {
+		.main-container {
+			display: flex;
+			align-content: center;
+			justify-content: center;
+		}
+		.main-container .information-image{
+			display:flex;
+			flex-direction: row;
+			margin-left: -13vw;
+		}
+		.main-container .information-image img {
+			width: 15vw;
+			height: auto;
+		}
+		.information {
+			margin-left: 5vw;
+		}
+
 	}
 </style>

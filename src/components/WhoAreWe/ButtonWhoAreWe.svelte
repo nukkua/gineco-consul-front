@@ -4,7 +4,7 @@
 	button {
 		color: white;
 		background-color: #0091ea;
-
+		margin-left: 15vw;
 		width: 50vw;
 		height: 5vh;
 		align-items: center;
@@ -13,8 +13,12 @@
 	}
 	@media (min-width: 769px) {
 		button {
-			width: 5vw;
-			height: 3vh;
+			color: white;
+			background-color: #0091ea;
+			border-radius: 16px;
+			width: 15vw;
+			height: 5vh;
+			margin-left: 8vw;
 		}
 	}
 </style>
