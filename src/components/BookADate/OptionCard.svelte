@@ -13,14 +13,25 @@
 	.option-card {
 		display:flex;
 		flex-direction: row;
+		margin-bottom: 2rem;
 	}
 
 	.option-card img{
-		height: 8rem;
+		height: 10vh;
 		
 	}
 	.option-card h4 {
-		margin-top: 5rem;
-		margin-left: 2rem;
+		margin-top: 5vh;
+		margin-left: 2vw;
+	}
+
+	@media (max-width: 769px){
+		.option-card img {
+			height: 7vh;
+		}
+		.option-card h4 {
+			margin-top: 2vh;
+			margin-left:  3vw;
+		}
 	}
 </style>

@@ -7,35 +7,74 @@
 		'Sexinformacion',
 		'Encuentranos'
 	];
+
+	let isMenuOpen = false;
 </script>
 
 <header>
-	<nav>
-		<img src="/images/consultorioicon.png" alt="icon del consultorio" />
+	<img src="/images/consultorioicon.png" alt="icon del consultorio" />
+	<nav class:open={isMenuOpen}>
 		{#each nameInformationCard as name}
 			<InformationCard {name} />
 		{/each}
 	</nav>
+
+	<button
+		on:click={() => {
+			isMenuOpen = !isMenuOpen;
+			console.log('Menu Open:', isMenuOpen); // Agrega esto para depurar
+		}}
+		class="hamburger-button">☰</button
+	>
 </header>
 
 <style>
 	header {
 		display: flex;
+		height: auto;
+		margin-top: 3vh;
 		justify-content: center;
 		align-items: center;
-		justify-content: space-evenly;
-		margin-top: 1.5rem;
-		margin-bottom: 2rem;
-		height: auto;
 	}
+
 	nav {
-		display: flex;
 		align-items: center;
-		gap: 1rem;
+		display: flex;
+		gap: 0.5rem;
 	}
+
 	img {
-		width: 11rem;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		max-width: 100%;
 		height: auto;
-		margin-right: 10rem;
+		object-fit: contain;
+	}
+
+	.hamburger-button {
+		display: none;
+		font-size: 2rem;
+		color: black;
+	}
+
+	@media (max-width: 769px) {
+		header {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.hamburger-button {
+			display: block; 
+		}
+
+		nav {
+			display: none; 
+		}
+
+		nav.open {
+			display: flex; 
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 </style>
