@@ -1,10 +1,11 @@
 <script>
 	import BookADate from '../components/BookADate/BookADate.svelte';
 	import WhoAreWe from '../components/WhoAreWe/WhoAreWe.svelte';
+	import OurServices from '../components/OurServices/Service.svelte';
 </script>
 
 <main>
-	<BookADate />
+	<OurServices/>
 	<WhoAreWe/>
 </main>
 
